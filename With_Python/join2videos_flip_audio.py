@@ -1,16 +1,12 @@
-### python3 join2videos_flip.py
-
-#ffmpeg -i output_video4.mp4 -an -c:v copy silenced_video.mp4
-#ffmpeg -i silenced_video.mp4 -stream_loop -1 -i "Temple Of Freedom - Hanu Dixit.mp3" -c:v copy -c:a aac -shortest final_output_video.mp4
-
+# ### python3 join2videos_flip.py
 
 import os
-import subprocess
 from pymediainfo import MediaInfo
-from moviepy.editor import VideoFileClip, concatenate_videoclips
+from moviepy.editor import VideoFileClip, concatenate_videoclips, AudioFileClip
 
 # Define the directory where the videos are located
 video_directory = "/media/jalcocert/BackUp/Z_BackUP_HD-SDD/OA5Pro/Z_Roma-29oct-2nov/ForoImperial/"
+audio_file = os.path.join(video_directory, "audio.mp3")  # The .mp3 file in the same folder
 
 # Initialize a list to store video information
 video_info = []
@@ -36,37 +32,29 @@ for filename in os.listdir(video_directory):
 # Check if all videos have the same properties
 if all(info == video_info[0] for info in video_info):
     print("All videos have the same width, height, codec, and frame rate! JOINING VIDEOS...")
-    
+
     # Sort the video files alphabetically
     video_files.sort()
 
     # Load the videos
-    video_clips = [VideoFileClip(video) for video in video_files]
+    video_clips = [VideoFileClip(video).without_audio() for video in video_files]
 
     # Concatenate the videos
     final_video = concatenate_videoclips(video_clips)
 
+    # Load the audio file
+    audio_clip = AudioFileClip(audio_file)
+
+    # Loop the audio if it's shorter than the final video duration
+    if audio_clip.duration < final_video.duration:
+        audio_clip = audio_clip.fx(vfx.loop, duration=final_video.duration)
+
+    # Set the audio to the final video
+    final_video = final_video.set_audio(audio_clip)
+
     # Write the result to a file
-    final_video.write_videofile("output_video4.mp4", codec="libx264")
+    output_file = os.path.join(video_directory, "output_video_with_audio.mp4")
+    final_video.write_videofile(output_file, codec="libx264")
+
 else:
     print("Not all videos have the same width, height, codec, and frame rate.")
-
-
-
-# from moviepy.editor import VideoFileClip, concatenate_videoclips
-
-# # Define the directory where the videos are located
-# video_directory = "/media/jalcocert/BackUp/Z_BackUP_HD-SDD/OA5Pro/Z_Roma-29oct-2nov/ForoImperial/"
-
-# # Load the videos
-# video1 = VideoFileClip(video_directory + "DJI_20241030144545_0034_D.MP4")
-# video2 = VideoFileClip(video_directory + "DJI_20241030145603_0036_D.MP4")
-
-# # Flip the second video 180 degrees - No need to flip here!!!
-# #video2_flipped = video2.rotate(180)
-
-# # Concatenate the videos
-# final_video = concatenate_videoclips([video1, video2])
-
-# # Write the result to a file
-# final_video.write_videofile("output_video3.mp4", codec="libx264")

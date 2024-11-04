@@ -1,6 +1,6 @@
 ```sh
 python3 --version #3.10.12
-pip install moviepy #==1.0.3
+pip install moviepy #==1.0.3 #https://github.com/Zulko/moviepy
 pip install pymediainfo #==6.1.0
 ```
 
