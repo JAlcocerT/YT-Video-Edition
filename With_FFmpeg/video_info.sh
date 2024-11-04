@@ -3,6 +3,21 @@ for video in *.MP4; do
     ffprobe "$video"
 done
 
+####
+
+for file in *.MP4; do
+    echo "Information for $file:"
+    ffprobe -v error -show_format -show_streams "$file"
+    echo "-----------------------"
+done
+
+####
+
+for file in *.MP4; do
+    echo "Rotation information for $file:"
+    ffprobe -v error -select_streams v:0 -show_entries stream_tags=rotate "$file" | grep "TAG:rotate"
+    echo "-----------------------"
+done
 
 ####
 
@@ -10,6 +25,14 @@ for video in *.MP4; do
     echo "File: $video"
     mediainfo "$video" | grep -E 'Rotation|Width|Height|Format|Duration'
 done
+
+for video in *.MP4; do
+    echo "File: $video"
+    mediainfo "$video" | grep -E 'Rotation|Width|Height|Format|Duration'
+    ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration,codec_name -show_entries stream_tags=rotate "$video" | grep -E "TAG:rotate|width|height|duration|codec_name"
+    echo "-----------------------"
+done
+
 
 ####
 
