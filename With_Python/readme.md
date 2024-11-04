@@ -2,7 +2,11 @@
 python3 --version #3.10.12
 pip install moviepy #==1.0.3
 pip install pymediainfo #==6.1.0
+```
 
+
+```sh
+pip install torch transformers pydub soundfile
 ```
 
 ---
