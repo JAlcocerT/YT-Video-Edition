@@ -1,6 +1,11 @@
 ```sh
 python3 --version #3.10.12
+pip install moviepy #==1.0.3
 ```
+
+---
+
+## Venv Setup
 
 ```sh
 #git clone https://github.com/JAlcocerT/openai-chatbot
