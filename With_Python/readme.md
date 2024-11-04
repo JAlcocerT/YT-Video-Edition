@@ -9,6 +9,10 @@ pip install pymediainfo #==6.1.0
 pip install torch transformers pydub soundfile
 ```
 
+```sh
+pip install pillow
+```
+
 ---
 
 ## Venv Setup

@@ -1,2 +1,8 @@
 moviepy==1.0.3 #https://pypi.org/project/moviepy/#history
 pymediainfo==6.1.0
+
+
+### Speech
+
+### Photo
+pillow==11.0.0
