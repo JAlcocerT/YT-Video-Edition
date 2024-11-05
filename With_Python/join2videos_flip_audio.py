@@ -1,5 +1,7 @@
 # ### python3 join2videos_flip.py
 
+###adding output in folder and with name the resolution and fps
+
 import os
 from pymediainfo import MediaInfo
 from moviepy.editor import VideoFileClip, concatenate_videoclips, AudioFileClip
