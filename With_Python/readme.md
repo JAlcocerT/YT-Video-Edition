@@ -1,5 +1,9 @@
 ```sh
 python3 --version #3.10.12
+python --version #3.7.9 (installed with chocolatey)
+#Set-ExecutionPolicy RemoteSigned
+
+
 pip install moviepy #==1.0.3 #https://github.com/Zulko/moviepy
 pip install pymediainfo #==6.1.0
 ```

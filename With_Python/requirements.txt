@@ -5,4 +5,4 @@ pymediainfo==6.1.0
 ### Speech
 
 ### Photo
-pillow==11.0.0
+#pillow==11.0.0
