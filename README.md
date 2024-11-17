@@ -1,10 +1,15 @@
 # YT-Video-Edition
 
+* **More Description** about this
+    * https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/#my-workflow-with-the-dji-oa5-pro
+    * https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#video-editing-101
+
 ```sh
 sudo apt install ffmpeg
 ```
 
 * All started at [this post](https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/)
+    * And continued in the [x300 post](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#video-editing-101)
 
 ```sh
 du -h --max-depth=1 #check space
@@ -24,8 +29,18 @@ ffmpeg -i PXL_20241030_115355466.jpg -q:v 3 compressed_PXL_20241030_115355466.jp
 #convert PXL_20241031_124037774.jpg -quality 85 compressed_PXL_20241031_124037774.jpg
 ```
 
+## Youtube Readme
+
+
+```
+Testing the DJi OA5Pro [2.7k/60fps/RS/W]in Netherlands during Autumn.
+
+https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/
+```
 
 ---
+
+## Venv Setup
 
 
 ```sh
