@@ -26,9 +26,25 @@ pip install pillow
 
 #python --version
 python3 -m venv video_python_venv #create a Python virtual environment
+python -m venv video_python_venv
 
 video_python_venv\Scripts\activate #activate venv (windows)
 source video_python_venv/bin/activate #(linux)
 
 #deactivate #when you are done
+
+#pip install -r requirements.txt
+
+
+source .env
+#export GROQ_API_KEY="your-api-key-here"
+#set GROQ_API_KEY=your-api-key-here
+#$env:GROQ_API_KEY="your-api-key-here"
+echo $GROQ_API_KEY $OPENAI_API_KEY $ANTHROPIC_API_KEY
+
+streamlit run Z_ST_AIssistant_v1.py
+
+# git add .
+# git commit -m "better st offer analyzer"
+# git push
 ```
