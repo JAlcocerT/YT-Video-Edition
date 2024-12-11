@@ -1,3 +1,9 @@
+
+* [Setup Python](https://jalcocert.github.io/JAlcocerT/guide-python/#installing-python-) and [install the requirements](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/):
+
+
+* See <https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#quick-vlogs-as-a-code>
+
 ```sh
 python3 --version #3.10.12
 python --version #3.7.9 (installed with chocolatey)
@@ -10,11 +16,7 @@ pip install pymediainfo #==6.1.0
 
 
 ```sh
-pip install torch transformers pydub soundfile
-```
-
-```sh
-pip install pillow
+pip install pillow #for watermarks
 ```
 
 ---
@@ -26,14 +28,15 @@ pip install pillow
 
 #python --version
 python3 -m venv video_python_venv #create a Python virtual environment
-python -m venv video_python_venv
+#python -m venv video_python_venv
 
 video_python_venv\Scripts\activate #activate venv (windows)
-source video_python_venv/bin/activate #(linux)
+#source video_python_venv/bin/activate #(linux)
 
 #deactivate #when you are done
 
-#pip install -r requirements.txt
+
+pip install -r requirements.txt
 
 
 source .env

@@ -10,7 +10,8 @@ from pymediainfo import MediaInfo
 from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 # Define the directory where the videos are located
-video_directory = "/media/jalcocert/BackUp/Z_BackUP_HD-SDD/OA5Pro/Z_Roma-29oct-2nov/ForoImperial/"
+#video_directory = "/media/jalcocert/BackUp/Z_BackUP_HD-SDD/OA5Pro/Z_Roma-29oct-2nov/ForoImperial/"
+video_directory = "/home/jalcocert/Desktop/oa5/MRK/Video1/Intro"
 
 # Initialize a list to store video information
 video_info = []

@@ -1,10 +1,11 @@
 # YT-Video-Edition
 
 * This repository - https://github.com/JAlcocerT/YT-Video-Edition
+
 * **More Description** about the topic on these **posts**
     * https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/#my-workflow-with-the-dji-oa5-pro
     * https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#video-editing-101
-    * https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/
+    * Latest: <https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/>
 
 ```sh
 sudo apt install ffmpeg #
@@ -13,7 +14,13 @@ sudo apt install ffmpeg #
 
 ```sh
 du -h --max-depth=1 #check space
-find . -name "*.LRF" -type f -delete #cleaning .LRF
+find . -name "*.LRF" -type f -delete #cleaning .LRF in UBUNTU
+```
+
+Put together videos from a folder with rencoding 
+
+```sh
+python3 join2videos_flip.py #adapt the video directory
 ```
 
 ---
@@ -41,7 +48,7 @@ https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/
 And **with timestamps**:
 
 ```
-
+abcdef
 ```
 
 ---
