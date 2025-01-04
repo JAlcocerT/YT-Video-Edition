@@ -9,10 +9,12 @@ load_dotenv()
 #client = openai.OpenAI()
 client = OpenAI()
 
+###python3 ./T2A/openait2a.py
+
 
 # Path to the file containing the transcribed text
-input_file_path = "transcription.txt"
-speech_file_path = "Cloudflare.mp3"
+input_file_path = "transcription0004.txt"
+speech_file_path = "openai-api-0004.mp3"
 
 # Read the contents of the file
 with open(input_file_path, "r") as file:

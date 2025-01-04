@@ -5,6 +5,9 @@ Better YT Workflow on [this post](https://jalcocert.github.io/JAlcocerT/my-youtu
 
 
 ```sh
+#ffmpeg -i capture0000.wav output.mp3
+
+
 python3 ./A2T/openais2t.py
 python3 ./T2A/openait2a.py
 ```

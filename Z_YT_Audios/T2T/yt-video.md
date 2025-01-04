@@ -47,3 +47,4 @@ OBS Studio to record screen: https://jalcocert.github.io/Linux/docs/nix/fav-apps
 🎙 Discord:   / discord  
 
 🎵 Outro Music From: https://www.bensound.com/
+🎵 Audio created by OpenAI API - onyx, TTS1 Model.

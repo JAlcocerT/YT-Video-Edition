@@ -7,7 +7,7 @@ client = OpenAI()
 
 
 # client = OpenAI(
-#     api_key="My API Key",  # Replace with your actual API key
+#     api_key="My_API_Key",  # Replace with your actual API key
 # )
 
 

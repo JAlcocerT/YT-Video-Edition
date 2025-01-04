@@ -8,7 +8,7 @@
     * Latest: <https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/>
 
 ```sh
-sudo apt install ffmpeg #
+sudo apt install ffmpeg #required for CLI video edition
 ```
 
 
