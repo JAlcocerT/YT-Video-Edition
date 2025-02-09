@@ -34,6 +34,49 @@ for video in *.MP4; do
 done
 
 
+### Just seconds and MB
+for file in *.MP4 *.mp4; do  # Handles both uppercase and lowercase extensions
+  if [[ -f "$file" ]]; then  # Check if it's a regular file (not a directory)
+    duration=$(ffmpeg -i "$file" 2>&1 | grep Duration | awk '{print $2}' | sed s/,//)
+    size=$(stat -c '%s' "$file") # Size in bytes
+    size_mb=$((size / (1024 * 1024))) # Size in MB
+
+    echo "File: $file"
+    echo "Duration: $duration seconds"
+    echo "Size: $size bytes ($size_mb MB)"
+    echo "--------------------"
+  fi
+done
+
+
+### And with the average mb/s then!
+for file in *.MP4 *.mp4; do
+  if [[ -f "$file" ]]; then
+    duration=$(ffmpeg -i "$file" 2>&1 | grep Duration | awk '{print $2}' | sed s/,//)
+    size=$(stat -c '%s' "$file")
+    size_mb=$((size / (1024 * 1024)))
+
+    # Calculate duration in seconds
+    hours=$(echo "$duration" | awk -F: '{print $1}')
+    minutes=$(echo "$duration" | awk -F: '{print $2}')
+    seconds=$(echo "$duration" | awk -F: '{print $3}' | cut -d. -f1)
+    total_seconds=$((hours * 3600 + minutes * 60 + seconds))
+
+    # Calculate average MB per second
+    if ((total_seconds > 0)); then
+      avg_mbps=$(echo "scale=2; $size_mb / $total_seconds" | bc)
+    else
+      avg_mbps="N/A (duration is zero)"
+    fi
+
+    echo "File: $file"
+    echo "Duration: $duration seconds"
+    echo "Size: $size bytes ($size_mb MB)"
+    echo "Average MB/s: $avg_mbps"
+    echo "--------------------"
+  fi
+done
+
 ####
 
 #check .MP$ info recursively
