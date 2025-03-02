@@ -4,6 +4,12 @@
 
 * See <https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#quick-vlogs-as-a-code>
 
+> **it uses ffmpeg in the bakground**
+
+---
+
+## Venv
+
 ```sh
 python3 --version #3.10.12
 python --version #3.7.9 (installed with chocolatey)
@@ -13,7 +19,6 @@ python --version #3.7.9 (installed with chocolatey)
 pip install moviepy #==1.0.3 #https://github.com/Zulko/moviepy
 pip install pymediainfo #==6.1.0
 ```
-
 
 ```sh
 pip install pillow #for watermarks

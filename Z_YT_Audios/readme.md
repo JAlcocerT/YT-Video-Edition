@@ -36,3 +36,7 @@ export OPENAI_API_KEY=sk-... # on Linux/Mac
 * <https://platform.openai.com/docs/guides/text-to-speech>
 
 ## Also Speech to Text
+
+Also known as speech recognition!
+
+Mp3 to txt.
